@@ -9,5 +9,6 @@ public class FindSynonym extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter_values);
+        String word = getIntent().getStringExtra("word");
     }
 }

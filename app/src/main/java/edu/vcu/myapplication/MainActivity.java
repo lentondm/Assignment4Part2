@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSynonymButtonClick(View v) {
         if (v.getId() == R.id.synonymB) {
-            Intent i = new Intent(MainActivity.this, FindSynonym.class)
+            EditText word = (EditText)findViewById(R.id.editText);
+            String str = word.getText().toString();
+            Intent i = new Intent(MainActivity.this, FindSynonym.class);
+            i.putExtra("word", str);
         }
     }
 }
