@@ -2,6 +2,7 @@ package edu.vcu.myapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -41,7 +42,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert(TABLE_NAME, null, values);
     }
 
+    public String findSynonym(String s){
+        db = this.getReadableDatabase();
+        String query = "select first , second from contacts";
+        Cursor cursor = db.rawQuery(query, null);
 
+        String a,b;
+        b = "not found";
+        if(cursor.moveToFirst()){
+            do{
+                a = cursor.getString(0);
+                if (a.equals(s)){
+                    b = cursor.getString(1);
+                    break;
+                }
+
+            }
+            while(cursor.moveToNext());
+        }
+        return b;
+    }
 
 
 }
