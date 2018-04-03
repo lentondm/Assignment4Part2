@@ -15,14 +15,14 @@ public class FindSynonym extends Activity {
         String word = getIntent().getStringExtra("word");
         TextView tv = (TextView)findViewById(R.id.resultString);
 
-        String result = helper.searchWord(word);
-        if (word.equals(result))
+        String result = helper.findSynonym(word);
+        if (result.equals("not found"))
         {
-            tv.setText(helper.findSynonym(result));
+            tv.setText("Word not found");
         }
         else
         {
-            tv.setText("Word not found");
+            tv.setText(result);
         }
     }
 }
