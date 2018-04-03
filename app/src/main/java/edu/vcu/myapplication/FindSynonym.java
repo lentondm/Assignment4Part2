@@ -11,18 +11,19 @@ public class FindSynonym extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.enter_values);
+        setContentView(R.layout.find_synonym);
         String word = getIntent().getStringExtra("word");
-        TextView tv = (TextView)findViewById(R.id.resultString);
+        final TextView textView = (TextView) findViewById(R.id.resultString);
 
         String result = helper.findSynonym(word);
         if (result.equals("not found"))
         {
-            tv.setText("Word not found");
+            String str = "Word not found";
+            textView.setText(str);
         }
         else
         {
-            tv.setText(result);
+            textView.setText(result);
         }
     }
 }

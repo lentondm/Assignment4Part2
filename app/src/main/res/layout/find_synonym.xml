@@ -9,6 +9,6 @@
         android:id="@+id/resultString"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/emptyString"
+        android:text=" "
         android:textAppearance="@android:style/TextAppearance.Material.Large" />
 </LinearLayout>

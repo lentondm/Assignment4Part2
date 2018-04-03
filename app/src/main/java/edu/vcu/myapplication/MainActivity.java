@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         if (v.getId() == R.id.synonymB) {
             EditText word = (EditText)findViewById(R.id.editText);
             String str = word.getText().toString();
-            Intent i = new Intent(MainActivity.this, FindSynonym.class);
-            i.putExtra("word", str);
-            startActivity(i);
+            Intent j = new Intent(MainActivity.this, FindSynonym.class);
+            j.putExtra("word", str);
+            startActivity(j);
         }
     }
 }
