@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             String str = word.getText().toString();
             Intent i = new Intent(MainActivity.this, FindSynonym.class);
             i.putExtra("word", str);
+            startActivity(i);
         }
     }
 }
