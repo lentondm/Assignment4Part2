@@ -26,13 +26,13 @@
         android:id="@+id/synonymB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onSynonymButtonClick"
+        android:onClick="onButtonClick"
         android:text="Find synonym" />
 
     <Button
         android:id="@+id/valuesB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onValuesButtonClick"
+        android:onClick="onButtonClick"
         android:text="Enter values" />
 </LinearLayout>

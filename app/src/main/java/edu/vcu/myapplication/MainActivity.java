@@ -14,14 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onValuesButtonClick(View v){
+    public void onButtonClick(View v){
         if (v.getId() == R.id.valuesB) {
             Intent i = new Intent(MainActivity.this, EnterValues.class);
             startActivity(i);
         }
-    }
-
-    public void onSynonymButtonClick(View v) {
         if (v.getId() == R.id.synonymB) {
             EditText word = (EditText)findViewById(R.id.editText);
             String str = word.getText().toString();
