@@ -1,5 +1,6 @@
 package edu.vcu.myapplication;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -30,4 +31,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(query);
         this.onCreate(db);
     }
+
+
+    public void insertContact(Contact c){
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_FIRST, c.getFirst());
+        values.put(COLUMN_SECOND, c.getSecond());
+        db.insert(TABLE_NAME, null, values);
+    }
+
+
+
+
 }
