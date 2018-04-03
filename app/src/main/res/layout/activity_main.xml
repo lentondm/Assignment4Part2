@@ -7,4 +7,30 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find synonym"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter word..." />
+
+    <Button
+        android:id="@+id/synonymB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find synonym" />
+
+    <Button
+        android:id="@+id/valuesB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter values" />
 </LinearLayout>
