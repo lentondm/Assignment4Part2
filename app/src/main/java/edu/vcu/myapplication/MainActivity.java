@@ -19,4 +19,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
+
+    public void onSynonymButtonClick(View v) {
+        if (v.getId() == R.id.synonymB) {
+            Intent i = new Intent(MainActivity.this, FindSynonym.class)
+        }
+    }
 }
